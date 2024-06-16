@@ -1,4 +1,4 @@
-Apa Itu Bson
+Perintah Insert Di Mongodb
 
 
 1. "C:\Program Files\MongoDB\Server\7.0\bin\mongod.exe" --dbpath="c:\data\db"
@@ -27,32 +27,36 @@ testing 1  :
 1. show dbs 
 2. use Aplikasi
 3. db 
+4. db.getCollectionNames()  // cara cek nama collections atau table
+5. db.users.find() // cek isi data users
 
 =============================
 
 
 testing ke 2 :
 
-BSON (Binary JSON) adalah format data biner yang digunakan oleh MongoDB untuk menyimpan dan mentransfer data.
+1. Memasukkan satu dokumen:
 
-Berikut adalah beberapa karakteristik penting dari BSON:
+db.users.insert({
+    name: "John Doe",
+    email: "john@example.com",
+    age: 30
+})
 
-1. Tipe Data Tambahan: BSON menyediakan tipe data tambahan dibandingkan dengan JSON, seperti Date, Binary Data, ObjectId, dan lainnya. Hal ini memungkinkan penyimpanan data yang lebih kaya dan kompleks.
-2. Efisiensi Penyimpanan: BSON menggunakan representasi biner yang lebih compact dibandingkan dengan format JSON. Hal ini membuat BSON lebih efisien dalam hal penggunaan ruang penyimpanan dan bandwidth.
-3. Kecepatan Akses: Karena BSON menggunakan format biner, operasi akses dan manipulasi data pada MongoDB dapat dilakukan lebih cepat dibandingkan dengan menggunakan format JSON.
-4. Kompatibilitas: BSON tetap kompatibel dengan JSON, sehingga dokumen BSON dapat dilihat dan dimanipulasi menggunakan alat-alat yang mendukung JSON.
+2. Memasukkan beberapa dokumen:
 
-==============================
-
-Beberapa contoh tipe data BSON:
-
-1. Double: Tipe data float 64-bit.
-2. String: Tipe data string UTF-8.
-3. Object: Tipe data objek, mirip dengan objek JSON.
-4. Array: Tipe data array, mirip dengan array JSON.
-5. Binary Data: Tipe data biner, dapat digunakan untuk menyimpan file.
-6. Date: Tipe data tanggal dan waktu.
-7. ObjectId: Tipe data unik untuk mengidentifikasi dokumen MongoDB.
+db.users.insertMany([
+    {
+        name: "Jane Doe",
+        email: "jane@example.com",
+        age: 25
+    },
+    {
+        name: "Bob Smith",
+        email: "bob@example.com",
+        age: 40
+    }
+])
 
 =====================================
 
