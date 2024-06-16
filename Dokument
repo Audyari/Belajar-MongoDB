@@ -1,4 +1,4 @@
-Perintah Find Dan Findone Di Mongodb
+Perintah Updateone Dan Updatemany Di Mongodb
 
 
 1. "C:\Program Files\MongoDB\Server\7.0\bin\mongod.exe" --dbpath="c:\data\db"
@@ -71,6 +71,31 @@ db.users.findOne({ name: "John" })
 db.users.findOne({ name: "John" }, { name: 1, email: 1, _id: 0 })
 
 =====================================
+
+
+testng 2 Perintah Updateone Dan Updatemany Di Mongodb
+
+db.users.updateOne(
+  { username: "johndoe" },
+  { $set: { email: "johndoe@example.com" }}
+)
+
+===========================
+
+db.users.updateMany(
+  { active: false },
+  { $set: { status: "inactive" }}
+)
+
+==================================
+
+db.users.updateOne(
+  { username: "newuser" },
+  { $set: { email: "newuser@example.com" }},
+  { upsert: true }
+)
+
+===================================
 
 
 
