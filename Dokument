@@ -1,29 +1,33 @@
-Kenapa Belajar Mongodb
+Cara Install Mongodb
 
-1. Fleksibilitas Skema:
-MongoDB memiliki skema yang fleksibel, artinya struktur data dapat berubah sesuai kebutuhan tanpa harus merubah seluruh aplikasi.
-Hal ini memudahkan dalam mengakomodasi perubahan-perubahan kebutuhan bisnis yang cepat.
+ada 2 file yg disiapkan ya :
 
-2. Skalabilitas Horizontal:
-MongoDB dapat dengan mudah ditambahkan kapasitasnya dengan menambahkan server baru (scale-out).
-Ini membuatnya sangat cocok untuk aplikasi dengan data yang terus bertambah besar.
+1. Windows:
 
-3. Performa yang Baik:
-MongoDB dirancang untuk memiliki performa yang baik, terutama untuk operasi-operasi yang sering dilakukan seperti read dan write.
-Hal ini dicapai dengan menggunakan indeks dan penyimpanan data yang teroptimasi.
+  * Pergi ke https://www.mongodb.com/try/download/community
+  * download mangodb shell juga : https://www.mongodb.com/try/download/shell biar bisa pake cmd yang "MSI " Ya jangan yg "ZIP"
+  * Pilih versi MongoDB yang sesuai dengan sistem operasi Anda (Windows 64-bit, misalnya)
+  * Unduh installer dan jalankan
+  * Ikuti instruksi instalasi, termasuk memilih direktori instalasi dan mengaktifkan opsi yang diinginkan (seperti menambahkan MongoDB ke PATH)
+  * Jika diminta, buat folder data default untuk MongoDB
 
-4. Dukungan untuk Data Tidak Terstruktur:
-MongoDB dapat dengan baik menyimpan dan mengelola data tidak terstruktur, seperti JSON, XML, dan lain-lain.
-Ini membuatnya cocok untuk aplikasi yang membutuhkan fleksibilitas dalam menyimpan data.
+============================
 
-5. Komunitas dan Ekosistem yang Besar:
-MongoDB memiliki komunitas pengembang yang sangat besar dan aktif, serta didukung oleh banyak tools dan framework.
-Hal ini memudahkan dalam pembelajaran, pengembangan, dan pemecahan masalah.
+1. cek nya ketik mongosh
 
-6. Aplikasi Berskala Besar:
-MongoDB telah digunakan oleh banyak perusahaan besar untuk aplikasi-aplikasi mereka yang berskala besar, seperti MongoDB Atlas (layanan cloud MongoDB).
-Hal ini menunjukkan keandalan dan skalabilitas MongoDB dalam menangani data dan beban kerja yang besar.
+==========================
 
+1. link nya : https://www.docs4dev.com/docs/en/mongodb/v3.6/reference/tutorial-install-mongodb-on-windows.html#google_vignette
+2. 
 
+cd C:\
+md "\data\db"
 
-====================================
+3. "C:\Program Files\MongoDB\Server\7.0\bin\mongod.exe" --dbpath="c:\data\db"
+
+4. baru ketik mongosh
+
+5. done heheheh
+
+===================================
+
