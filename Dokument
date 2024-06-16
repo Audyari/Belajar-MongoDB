@@ -1,4 +1,4 @@
-Perintah Deleteone Dan Deletemany Di Mongodb
+Beberapa Query Operator Yang Perlu Kamu Coba
 
 
 1. "C:\Program Files\MongoDB\Server\7.0\bin\mongod.exe" --dbpath="c:\data\db"
@@ -111,6 +111,79 @@ deleteMany()
 db.products.deleteMany({ category: "Electronics" })
 
 =====================================================
+
+Beberapa Query Operator Yang Perlu Kamu Coba : 
+
+ada 8 yg perlu kamu coba :
+
+1. $eq (Equal):
+
+db.users.find({ age: { $eq: 30 } })
+
+Query ini akan mencari semua dokumen dalam koleksi "users" di mana nilai field "age" sama dengan 30.
+******************************************************
+
+2. $gt (Greater Than) dan $gte (Greater Than or Equal):
+
+db.users.find({ age: { $gt: 30 } })
+db.users.find({ age: { $gte: 30 } })
+
+Query pertama akan mencari semua dokumen di mana usia lebih besar dari 30, sedangkan query kedua akan mencari semua dokumen di mana usia lebih besar atau sama dengan 30.
+*****************************************************************************************************************************
+
+3.$lt (Less Than) dan $lte (Less Than or Equal):
+
+db.users.find({ age: { $lt: 30 } })
+db.users.find({ age: { $lte: 30 } })
+
+Query pertama akan mencari semua dokumen di mana usia kurang dari 30, sedangkan query kedua akan mencari semua dokumen di mana usia kurang dari atau sama dengan 30.
+*************************************************************************************************************
+
+4.$in:
+
+db.users.find({ category: { $in: ["Electronics", "Books"] } })
+
+Query ini akan mencari semua dokumen di mana nilai field "category" ada dalam array ["Electronics", "Books"].
+**********************************************************************
+
+5.$nin (Not In):
+
+db.users.find({ category: { $nin: ["Electronics", "Books"] } })
+
+Query ini akan mencari semua dokumen di mana nilai field "category" tidak ada dalam array ["Electronics", "Books"].
+**************************************************************************
+
+6. $and:
+
+db.users.find({
+  $and: [
+    { age: { $gt: 30 } },
+    { age: { $lt: 50 } }
+  ]
+})
+
+Query ini akan mencari semua dokumen di mana usia lebih besar dari 30 dan kurang dari 50.
+*************************************************************
+
+7. $or:
+
+db.users.find({
+  $or: [
+    { category: "Electronics" },
+    { category: "Books" }
+  ]
+})
+
+Query ini akan mencari semua dokumen di mana nilai field "category" adalah "Electronics" atau "Books".
+*****************************************************************************
+
+8. $regex:
+
+db.users.find({ name: { $regex: /^John/ } })
+
+Query ini akan mencari semua dokumen di mana nilai field "name" dimulai dengan "John".
+*********************************************************************************************
+
 
 
 
