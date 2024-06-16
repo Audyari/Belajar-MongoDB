@@ -1,20 +1,31 @@
-Perkenalan Database Dan Mongodb
+Perbedaan Database Sql Dan Nosql
 
-Database adalah sistem untuk menyimpan dan mengelola data secara terstruktur.
+perbedaan antara database SQL (Structured Query Language) dan database NoSQL (Not only SQL).
 
-MongoDB adalah salah satu contoh database NoSQL.
+1. Data Model:
+SQL: Data disimpan dalam bentuk tabel dengan baris (records) dan kolom (fields) yang terstruktur.
+NoSQL: Data disimpan dalam berbagai model, seperti dokumen, graf, kolom keluarga, atau kunci-nilai, yang lebih fleksibel dan tidak terstruktur.
 
-Beberapa fitur utama MongoDB antara lain:
+2. Skema:
+SQL: Memiliki skema yang tetap dan harus didefinisikan terlebih dahulu.
+NoSQL: Umumnya memiliki skema yang dinamis dan dapat berubah sewaktu-waktu.
 
-1. Scalability: MongoDB dapat menangani jumlah data dan beban kerja yang besar dengan mudah. Ia dapat di-"scale-out" dengan menambahkan lebih banyak server.
-2. Fleksibilitas Skema: MongoDB memiliki fleksibilitas dalam hal skema data. Dokumen-dokumen dalam MongoDB dapat memiliki struktur yang berbeda-beda.
-3. Performa Tinggi: MongoDB dirancang untuk memberikan performa yang tinggi, terutama untuk operasi-operasi baca dan tulis.
-4. Ketersediaan Tinggi: MongoDB mendukung replikasi data untuk meningkatkan ketersediaan.
-5. Indeksasi Kompleks: MongoDB mendukung berbagai jenis indeks, termasuk indeks teks, indeks spasial, dan lain-lain.
+3. Skalabilitas:
+SQL: Umumnya melakukan skalabilitas secara vertikal (scale-up) dengan menambah sumber daya pada satu server.
+NoSQL: Dapat melakukan skalabilitas secara horizontal (scale-out) dengan menambah lebih banyak server.
 
+4. Konsistensi:
+SQL: Menjamin konsistensi data melalui fitur ACID (Atomicity, Consistency, Isolation, Durability).
+NoSQL: Umumnya lebih fokus pada ketersediaan dan partisi data (availability and partition tolerance) daripada konsistensi, sesuai dengan teori CAP.
 
-MongoDB banyak digunakan dalam aplikasi-aplikasi modern yang membutuhkan fleksibilitas dan skalabilitas,
-seperti aplikasi web, aplikasi mobile, aplikasi Internet of Things, dan lain-lain.
+5. Query:
+SQL: Menggunakan bahasa query yang terstruktur dan deklaratif (SQL).
+NoSQL: Menggunakan API yang spesifik untuk setiap model data, seperti query dokumen, query graf, dan lain-lain.
+
+6. Penggunaan:
+SQL: Cocok untuk aplikasi yang membutuhkan konsistensi dan integritas data yang kuat, seperti sistem keuangan, sistem informasi akuntansi, dan lain-lain.
+NoSQL: Cocok untuk aplikasi yang membutuhkan fleksibilitas, skalabilitas, dan penanganan data yang tidak terstruktur, seperti aplikasi web, aplikasi mobile, analisis big data, dan lain-lain.
+
 
 
 =================================================
