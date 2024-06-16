@@ -1,24 +1,9 @@
-Perintah Insert Di Mongodb
+Perintah Find Dan Findone Di Mongodb
 
 
 1. "C:\Program Files\MongoDB\Server\7.0\bin\mongod.exe" --dbpath="c:\data\db"
 
 2. baru ketik mongosh
-
-
-===================================
-
-Beberapa perintah dasar yang dapat Anda gunakan di Mongo Shell:
-
-1. show dbs - Menampilkan daftar database yang tersedia
-2. use <database_name> - Memilih database yang akan digunakan
-3. db - Menampilkan database yang sedang aktif
-show collections - Menampilkan daftar koleksi (tabel) di database yang aktif
-db.<collection_name>.find() - Menampilkan dokumen-dokumen dalam koleksi
-db.<collection_name>.insert({ ... }) - Menambahkan dokumen baru ke dalam koleksi
-db.<collection_name>.update({ ... }, { ... }) - Memperbarui dokumen dalam koleksi
-db.<collection_name>.remove({ ... }) - Menghapus dokumen dari koleksi
-
 
 ==========================================
 
@@ -58,7 +43,36 @@ db.users.insertMany([
     }
 ])
 
+==============================
+
+3. Perintah Find Dan Findone Di Mongodb
+
+*****find():*****
+
+// Mencari semua dokumen dalam koleksi "users"
+db.users.find()
+
+// Mencari dokumen dengan nama "John"
+db.users.find({ name: "John" })
+
+// Menampilkan hanya field "name" dan "email"
+db.users.find({}, { name: 1, email: 1, _id: 0 })
+
+
+******findOne():******
+
+// Mengambil satu dokumen dari koleksi "users"
+db.users.findOne()
+
+// Mengambil satu dokumen dengan nama "John"
+db.users.findOne({ name: "John" })
+
+// Menampilkan hanya field "name" dan "email"
+db.users.findOne({ name: "John" }, { name: 1, email: 1, _id: 0 })
+
 =====================================
+
+
 
 
 
