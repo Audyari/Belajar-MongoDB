@@ -1,33 +1,32 @@
-Cara Install Mongodb
+Cara Menjalankan Mongodb Dan Menggunakan Mongo Shell
 
-ada 2 file yg disiapkan ya :
 
-1. Windows:
+1. "C:\Program Files\MongoDB\Server\7.0\bin\mongod.exe" --dbpath="c:\data\db"
 
-  * Pergi ke https://www.mongodb.com/try/download/community
-  * download mangodb shell juga : https://www.mongodb.com/try/download/shell biar bisa pake cmd yang "MSI " Ya jangan yg "ZIP"
-  * Pilih versi MongoDB yang sesuai dengan sistem operasi Anda (Windows 64-bit, misalnya)
-  * Unduh installer dan jalankan
-  * Ikuti instruksi instalasi, termasuk memilih direktori instalasi dan mengaktifkan opsi yang diinginkan (seperti menambahkan MongoDB ke PATH)
-  * Jika diminta, buat folder data default untuk MongoDB
+2. baru ketik mongosh
 
-============================
-
-1. cek nya ketik mongosh
-
-==========================
-
-1. link nya : https://www.docs4dev.com/docs/en/mongodb/v3.6/reference/tutorial-install-mongodb-on-windows.html#google_vignette
-2. 
-
-cd C:\
-md "\data\db"
-
-3. "C:\Program Files\MongoDB\Server\7.0\bin\mongod.exe" --dbpath="c:\data\db"
-
-4. baru ketik mongosh
-
-5. done heheheh
 
 ===================================
+
+Beberapa perintah dasar yang dapat Anda gunakan di Mongo Shell:
+
+1. show dbs - Menampilkan daftar database yang tersedia
+2. use <database_name> - Memilih database yang akan digunakan
+3. db - Menampilkan database yang sedang aktif
+show collections - Menampilkan daftar koleksi (tabel) di database yang aktif
+db.<collection_name>.find() - Menampilkan dokumen-dokumen dalam koleksi
+db.<collection_name>.insert({ ... }) - Menambahkan dokumen baru ke dalam koleksi
+db.<collection_name>.update({ ... }, { ... }) - Memperbarui dokumen dalam koleksi
+db.<collection_name>.remove({ ... }) - Menghapus dokumen dari koleksi
+
+
+==========================================
+
+testing : 
+
+1. show dbs 
+2. use Aplikasi
+3. db 
+
+=============================
 
