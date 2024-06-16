@@ -1,4 +1,4 @@
-Perintah Updateone Dan Updatemany Di Mongodb
+Perintah Deleteone Dan Deletemany Di Mongodb
 
 
 1. "C:\Program Files\MongoDB\Server\7.0\bin\mongod.exe" --dbpath="c:\data\db"
@@ -80,14 +80,14 @@ db.users.updateOne(
   { $set: { email: "johndoe@example.com" }}
 )
 
-===========================
+********************************************
 
 db.users.updateMany(
   { active: false },
   { $set: { status: "inactive" }}
 )
 
-==================================
+**************************************
 
 db.users.updateOne(
   { username: "newuser" },
@@ -96,6 +96,21 @@ db.users.updateOne(
 )
 
 ===================================
+
+
+4. Perintah Deleteone Dan Deletemany Di Mongodb :
+
+deleteOne()
+
+db.products.deleteOne({ _id: ObjectId("507f1f77bcf86cd799439011") })
+
+*************************************************
+
+deleteMany()
+
+db.products.deleteMany({ category: "Electronics" })
+
+=====================================================
 
 
 
