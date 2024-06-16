@@ -1,0 +1,23 @@
+Perkenalan Database Dan Mongodb
+
+Database adalah sistem untuk menyimpan dan mengelola data secara terstruktur.
+
+MongoDB adalah salah satu contoh database NoSQL.
+
+Beberapa fitur utama MongoDB antara lain:
+
+1. Scalability: MongoDB dapat menangani jumlah data dan beban kerja yang besar dengan mudah. Ia dapat di-"scale-out" dengan menambahkan lebih banyak server.
+2. Fleksibilitas Skema: MongoDB memiliki fleksibilitas dalam hal skema data. Dokumen-dokumen dalam MongoDB dapat memiliki struktur yang berbeda-beda.
+3. Performa Tinggi: MongoDB dirancang untuk memberikan performa yang tinggi, terutama untuk operasi-operasi baca dan tulis.
+4. Ketersediaan Tinggi: MongoDB mendukung replikasi data untuk meningkatkan ketersediaan.
+5. Indeksasi Kompleks: MongoDB mendukung berbagai jenis indeks, termasuk indeks teks, indeks spasial, dan lain-lain.
+
+
+MongoDB banyak digunakan dalam aplikasi-aplikasi modern yang membutuhkan fleksibilitas dan skalabilitas,
+seperti aplikasi web, aplikasi mobile, aplikasi Internet of Things, dan lain-lain.
+
+
+=================================================
+
+
+
